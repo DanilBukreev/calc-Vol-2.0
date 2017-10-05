@@ -12,9 +12,8 @@ int main()
 	 do
 	 {
 		 cout << "calc" << endl;
-		 int a, b, r, r1;
+		 int a, b, r, r1, r2;
 		 char operation;
-		 const long long MOD = 1e9 + 7;
 		 cout << "Выберите операцию [+, -, *, /, %, ^, !, &, |, <, >]:" << endl;
 		 cin >> operation;
 		 cout << " Введите первое число: " << endl;
@@ -27,48 +26,47 @@ int main()
 		 }
 		switch (operation) {
 		case '+':
-			r = a + b;
+			cout << "Результат: " << a + b << endl;
 			break;
 		case '-':
-			r = a - b;
+			cout <<  "Результат: "<< a - b << endl;
 			break;
 		case '*':
-			r = a * b;
+			cout << "Результат: " << a * b << endl;
 			break;
 		case '/':		
 				if (b != 0)
-					cout << "Результат:" << a / b << endl;
+					cout << "Результат:" << (double)a / (double)b << endl;
 				else
 					cerr << "на 0 делить нельзя " << endl;
 			break;
 		case '%':
-			r = a % b;
+			cout << "Результат:" << a % b << endl;
 			break;
 		case '^':
-			r = pow(a, b);
+			cout << "Результат: " << pow(a, b) << endl;
 			break;
 		case '<':
-			r = a << 1;
+			cout << "Результат: " << (a << 1) << endl;
 			break;	
 		case '>':
-			r = a > 1;
+			cout << "Результат: " << (a >> 1) << endl;
 			break;
 		case '!':
-			r = !a;
+			cout << " Результат: " << !a << endl;
 			break;
 		case '|':
-			r =  a | b;
+			cout << "Результат: "<< (a | b) << endl;
 			break;
 		case '&':
-			r =  a & b;
+			cout << "Результат:" << ( a & b) << endl;
 			break;
 		default:
 			cout << "Ошибка" << endl;
 		}
-		cout << "Результат:" << r <<  endl;
 		cout << "Продложить работу? (y/n)" << endl;
 		cin >> s;
 	} while (s == 'y');
-	system("pause");
 	return 0;
 }
+
